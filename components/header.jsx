@@ -6,12 +6,11 @@ import Image from 'next/image';
 const Header = ( props ) => {
 
   return (
-    <Navbar bg="dark">
-      <Container>
-        <Navbar.Brand href="#home">
-        </Navbar.Brand>
-      </Container>
-    </Navbar>
+    <div className="navbar">
+      <div className="logo">
+        ARGUS
+      </div>
+    </div>
   )
 }
 

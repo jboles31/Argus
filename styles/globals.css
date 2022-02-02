@@ -6,13 +6,43 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --main-darkblue:#041C32;
+  --main-blue:#04293A;
+  --main-lightblue:#064663;
+  --main-orange:#ECB365;
+}
+
+@font-face {
+  font-family: 'Museo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../public/fonts/MuseoModerno-Regular.ttf);
+  /* src: local('Museo'), url(../public/fonts/MuseoModerno-Regular.ttf) format('ttf'); */
+}
+
 main {
   height: 100vh;
   width: 100vw;
 }
 
+.navbar {
+  height: 5vh;
+  width: 100vw;
+  background-color: var(--main-darkblue);
+  display: flex;
+}
+
+.logo {
+  font-family: Museo;
+  color: var(--main-orange);
+  margin-left: 8vw;
+  font-size: 2vh;
+}
+
 .db-wrapper {
-  background-color: aqua;
+  background-color: var(--main-lightblue);
   height: 100%;
   width: 100%;
   display: flex;
@@ -21,6 +51,17 @@ main {
   flex-direction: column;
 }
 
+.search-wrapper {
+  height: 10vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.searchbar {
+  height: 50%;
+}
 a {
   color: inherit;
   text-decoration: none;
