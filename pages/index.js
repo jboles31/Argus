@@ -23,6 +23,7 @@ class Home extends React.Component {
       const response = await axios({
         method: 'get',
         url: `https://api.geocod.io/v1.7/geocode?api_key=8e99d79ee4b1eb867e292518b2276216d92e39d&postal_code=${zip}&fields=cd`,
+        // url: `/api/hello`,
         responseType: 'application/json'
       })
       console.log("response", response)
