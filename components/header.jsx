@@ -1,7 +1,4 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Image from 'next/image';
 
 const Header = ( props ) => {
 
