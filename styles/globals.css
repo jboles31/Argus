@@ -11,6 +11,7 @@ body {
   --main-blue:#04293A;
   --main-lightblue:#064663;
   --main-orange:#ECB365;
+  --main-white: rgba(355,355,355,.7);
 }
 
 @font-face {
@@ -43,11 +44,11 @@ main {
   color: var(--main-orange);
   margin-left: 8vw;
   font-size: 2vh;
+  cursor: pointer;
 }
 
 .db-wrapper {
   background-color: var(--main-lightblue);
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -55,17 +56,60 @@ main {
   flex-direction: column;
 }
 
+.db-search {
+  height: 100%;
+}
+
 .search-wrapper {
-  height: 10vh;
-  width: 50vw;
+  height: 4vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .searchbar {
-  height: 50%;
+  width: 45%;
 }
+
+.search-button {
+  height: 100%;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.card {
+  width: 80%;
+  margin-bottom: 2em;
+  border-color: var(--main-white);
+}
+
+.card-body {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+}
+
+.card-header {
+  display: flex;
+  color: var(--main-white);
+  background-color: var(--main-darkblue);
+  border-color: var(--main-white); 
+}
+
+.branch {
+  width: 90%;
+}
+
+.link {
+  color: var(--main-orange);
+}
+
 a {
   color: inherit;
   text-decoration: none;
