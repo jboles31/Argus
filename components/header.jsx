@@ -4,7 +4,7 @@ const Header = ( props ) => {
 
   return (
     <div className="navbar">
-      <div className="logo">
+      <div className="logo" onClick={() => window.location.reload(true)}>
         ARGUS
       </div>
     </div>
