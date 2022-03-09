@@ -7,7 +7,7 @@ const DashBoard = ( props ) => {
 
   if(props.reps.length > 0) {
     return (
-      <div className="db-wrapper">  
+      <div className="db-wrapper db-reps">  
         <Results
           reps={props.reps} 
         />
@@ -15,7 +15,7 @@ const DashBoard = ( props ) => {
     )
   } else {
     return (
-      <div className="db-wrapper">  
+      <div className="db-wrapper db-search">  
         <SearchBar 
           getReps={props.getReps}
         />
