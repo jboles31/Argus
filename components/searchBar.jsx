@@ -12,7 +12,7 @@ const SearchBar = ( props ) => {
     <div className="search-wrapper">
       {/* <input className="searchbar" type="text" placeholder="Search by Home Address"></input> */}
 
-          <input type="searchbar" placeHolder="Enter US Zipcode" onChange={(e) => updateSearch(e.target.value)}></input>
+          <input type="searchbar" placeholder="Enter US Zipcode" onChange={(e) => updateSearch(e.target.value)}></input>
           <button type="submit" className="search-button" onClick={() => props.getReps(zip)}>Search</button>
 
       {/* // <Typeahead 
