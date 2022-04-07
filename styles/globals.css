@@ -47,6 +47,16 @@ main {
   cursor: pointer;
 }
 
+.socialWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.social-icon {
+  height: 4vh;
+  padding-right: 1vw;
+}
+
 .db-wrapper {
   background-color: var(--main-lightblue);
   width: 100%;
