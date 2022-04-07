@@ -1,4 +1,6 @@
 import React from 'react';
+import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const getAge = (dateString) => {
   var today = new Date();
@@ -29,6 +31,28 @@ const Results = ( props ) => {
         </div>
       )
 
+      let social = []
+      let testObj = Object.entries(rep.social)
+      console.log('testObj: ', testObj);
+      Object.keys(rep.social).map(key => {
+        
+        if(rep.social[key] != null) {
+          switch (key) {
+            case 'twitter':
+              social.push(
+                <a className="twitter" target="_blank" href={"https://www.twitter.com/" + rep.social[key]} rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faTwitter} /></a>
+              )
+              break;
+            case 'facebook':
+              social.push(
+                <a className="twitter" target="_blank" href={"https://www.facebook.com/" + rep.social[key]} rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faFacebook} /></a>
+              )
+                break;
+          }
+        }
+
+      })
+
       result.push(
         <div className="card">
           {cardHeader}
@@ -40,6 +64,7 @@ const Results = ( props ) => {
               Phone: {rep.contact.phone} <br></br>
               Address:  {rep.contact.address} <br></br>
             </p>
+            {social.length > 0 ? <div className="socialWrapper">{social}</div> : null}
           </div>
         </div>
       )
